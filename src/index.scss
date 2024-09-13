@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+$app-bg-color: #f4f4f9;
+$app-primary-color: #3498db;
+$app-secondary-color: #2ecc71;;
+$app-text-color: #fff;
+$app-border-radius: 8px;
+
+$app-convert-button-bg-gradient: linear-gradient(90deg, #753fbf, #4abfd9);
+$app-download-button-bg-gradient: linear-gradient(90deg, #01c7fc, #00a1d8, #0056d6);
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $app-bg-color;
+  color: $app-text-color;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(90deg, #3d4052,#282a36,#09090c);
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: $app-primary-color;
+  }
+
+  .converter-container {
+    background: white;
+    padding: 2rem;
+    border-radius: $app-border-radius;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    input[type="file"] {
+      
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: $app-border-radius;
+      border: 1px solid $app-primary-color;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+
+    .convert-button, .download-button {
+      background: $app-convert-button-bg-gradient;
+      color: $app-text-color;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: $app-border-radius;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        background: linear-gradient(90deg, #5d2b8b, #3a9dcd);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      &.download-button {
+        margin-top: 1rem;
+        background: $app-download-button-bg-gradient;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background: linear-gradient(90deg, #02a0d7, #0095c7, #004db4);
+        }
+      }
+    }
+  }
+}
